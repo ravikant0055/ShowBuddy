@@ -1,0 +1,165 @@
+{
+    "movies": [
+        {
+            "id": 1,
+            "image": "https://image.tmdb.org/t/p/w500/lPsD10PP4rgUGiGR4CCXA6iY0QQ.jpg",
+            "name": "Godzilla vs. Kong",
+            "rating": 7.5,
+            "language": "English",
+            "category": "UA16+",
+            "genre": [
+                "Action",
+                "Sci-Fi",
+                "Adventure"
+            ],
+            "release_date": "2021-03-31",
+            "overview": "When the mysterious Hollow Earth realm is rediscovered, Kong and his protectors undertake a perilous journey, unexpectedly finding themselves in the path of an enraged Godzilla."
+        },
+        {
+            "id": 2,
+            "image": "https://image.tmdb.org/t/p/w500/fFRq98cW9lTo6di2o4lK1qUAWaN.jpg",
+            "name": "Tom & Jerry",
+            "rating": 6.0,
+            "language": "English",
+            "category": "U",
+            "genre": [
+                "Comedy",
+                "Family",
+                "Animation"
+            ],
+            "release_date": "2021-02-26",
+            "overview": "Tom the cat moves into a fancy NYC hotel on the eve of a big wedding, much to the dismay of Jerry the mouse."
+        },
+        {
+            "id": 3,
+            "image": "https://image.tmdb.org/t/p/w500/tnAuB8q5vv7Ax9UAEje5Xi4BXik.jpg",
+            "name": "Justice League",
+            "rating": 7.0,
+            "language": "English",
+            "category": "UA16+",
+            "genre": [
+                "Action",
+                "Adventure",
+                "Fantasy"
+            ],
+            "release_date": "2017-11-17",
+            "overview": "United by their common goal of defeating Steppenwolf and his army of Parademons, Wonder Woman, Aquaman, Flash, Cyborg and Batman assemble to fight together to save the world."
+        },
+        {
+            "id": 4,
+            "image": "https://image.tmdb.org/t/p/w500/6KErczPBROQty7QoIsaa6wJYXZi.jpg",
+            "name": "Wonder Woman",
+            "rating": 7.4,
+            "language": "English",
+            "category": "UA16+",
+            "genre": [
+                "Action",
+                "Adventure",
+                "Fantasy"
+            ],
+            "release_date": "2017-06-02",
+            "overview": "Diana, princess of the Amazons, is trained to be an unconquerable warrior. When an American pilot crashes on their island and tells of conflict in the outside world, she leaves her home to fight a war to end all wars."
+        },
+        {
+            "id": 5,
+            "image": "https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg",
+            "name": "Raya and the Last Dragon",
+            "rating": 7.3,
+            "language": "English",
+            "category": "UA13+",
+            "genre": [
+                "Animation",
+                "Adventure",
+                "Fantasy"
+            ],
+            "release_date": "2021-03-05",
+            "overview": "In a realm known as Kumandra, a re-imagined Earth, a warrior named Raya is determined to find the last dragon to restore harmony among her divided people."
+        },
+        {
+            "id": 6,
+            "image": "https://image.tmdb.org/t/p/w500/pgqgaUx1cJb5oZQQ5v0tNARCeBp.jpg",
+            "name": "Sentinelle",
+            "rating": 5.5,
+            "language": "French",
+            "category": "UA18+",
+            "genre": [
+                "Action",
+                "Thriller"
+            ],
+            "release_date": "2021-03-05",
+            "overview": "After returning from service, a French soldier uses her training to track down those who assaulted her sister."
+        }
+    ],
+    "shows": [
+        {
+            "id": 1,
+            "image": "https://media.insider.in/image/upload/c_crop,g_custom/v1758970250/jwkqaq8sbi0olxqovvdl.png",
+            "name": "Diwali Dhamaka",
+            "date": "Fri, 15 Oct",
+            "time": "7:00 PM",
+            "price": "$75",
+            "venue": "Aura Kitchen Bar",
+            "location": "Gurugram"
+        },
+        {
+            "id": 2,
+            "image": "https://media.insider.in/image/upload/c_crop,g_custom/v1754319439/gjzedwmrxfdboi45secc.jpg",
+            "name": "Akon India Tour",
+            "date": "Sun, 09 Nov",
+            "time": "8:00 PM",
+            "price": "$150",
+            "venue": "Gate No 14, JLN Stadium",
+            "location": "New Delhi"
+        },
+        {
+            "id": 3,
+            "image": "https://media.insider.in/image/upload/c_crop,g_custom/v1759743110/r6qyzn0m9sowznwb7tuj.jpg",
+            "name": "Diwali Party",
+            "date": "Fri, 17 Oct",
+            "time": "7:30 PM",
+            "price": "$120",
+            "venue": "Cozy Box Cafe",
+            "location": "Gurugram"
+        },
+        {
+            "id": 4,
+            "image": "https://media.insider.in/image/upload/c_crop,g_custom/v1752320027/zwlatvsemxliv7on5aln.png",
+            "name": "Adult Rated Show",
+            "date": "Wed, 6 Nov",
+            "time": "6:45 PM",
+            "price": "$100",
+            "venue": "Imperial Theater",
+            "location": "Gurugram"
+        },
+        {
+            "id": 5,
+            "image": "https://media.insider.in/image/upload/c_crop,g_custom/v1750449286/tjli9nctsqmef6d2q1gt.png",
+            "name": "Comedy Night",
+            "date": "Fri, 10 Oct",
+            "time": "5:30 PM",
+            "price": "$95",
+            "venue": "Comdey Club",
+            "location": "Noida"
+        },
+        {
+            "id": 6,
+            "image": "https://media.insider.in/image/upload/c_crop,g_custom/v1741943906/o5piw4srw6dm00h6rh1o.jpg",
+            "name": "Sex Jokes Night",
+            "date": "Thu, 9 Oct",
+            "time": "8:00 PM",
+            "price": "$85",
+            "venue": "The Joke Theator",
+            "location": "Gurugram"
+        },
+        {
+            "id": 7,
+            "image": "https://media.insider.in/image/upload/c_crop,g_custom/v1759047937/qgedkdi9gplx02xc0kgg.jpg",
+            "name": "Noida Comdey Bar",
+            "date": "Sat, 10 Oct",
+            "time": "8:00 PM",
+            "price": "$240",
+            "venue": "Hitchin Bisto",
+            "location": "Noida"
+        }
+    ]
+}
