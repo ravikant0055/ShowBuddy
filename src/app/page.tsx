@@ -20,7 +20,6 @@ export default function Home() {
           <ShowsSlider/>
         </div>
       </section>
-      <Footer/>
     </div>
   );
 }

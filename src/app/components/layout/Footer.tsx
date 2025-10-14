@@ -9,7 +9,7 @@ const Footer = () => {
         <Image src={showbuddy} alt="logo" className='w-[200px]'/>
       </div>
 
-    </div>
+    </div> 
   )
 }
 

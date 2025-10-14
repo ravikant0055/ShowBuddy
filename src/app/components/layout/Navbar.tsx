@@ -15,10 +15,10 @@ const Navbar = () => {
         <Link href="/"><Image src={showbuddy} alt="showbuddy" className="object-cover w-[100px]" /></Link>
         <ul className="flex space-x-2">
           <Link href="/"><li className="font-medium text-sm bg-[#67dcf4] text-[#00272f] rounded-xl px-4 py-1">Explore</li></Link>
-          <Link href="/"><li className="font-medium text-sm rounded-xl px-4 py-1">Buddies</li></Link>
-          <Link href="/"><li className="font-medium text-sm rounded-xl px-4 py-1">Movies</li></Link>
+          <Link href="/buddies"><li className="font-medium text-sm rounded-xl px-4 py-1">Buddies</li></Link>
+          <Link href="/movies"><li className="font-medium text-sm rounded-xl px-4 py-1">Movies</li></Link>
           <Link href="/shows"><li className="font-medium text-sm rounded-xl px-4 py-1">Shows</li></Link>
-          <Link href="/"><li className="font-medium text-sm rounded-xl px-4 py-1">Cafes</li></Link>
+          <Link href="/cafes"><li className="font-medium text-sm rounded-xl px-4 py-1">Cafes</li></Link>
         </ul>
       </div>
 
