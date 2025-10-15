@@ -1,8 +1,16 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '../ui/tabs'
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '../ui/card'
 
-const genres = [
+interface ShowFilterProps {
+  defaultFilters?: {
+    genres?: string[]
+    sort?: string
+  }
+  onChange?: (filters: { genres: string[]; sort: string }) => void
+}
+
+const genresList = [
   'Adventure',
   'Art Exhibitions',
   'Business Conferences',
@@ -46,58 +54,84 @@ const genres = [
   'Standup',
   'Theatre',
   'Themed Parties'
-];
+]
 
-const ShowFilter = () => {
+const ShowFilter: React.FC<ShowFilterProps> = ({ defaultFilters, onChange }) => {
+  const [selectedGenres, setSelectedGenres] = useState<string[]>(defaultFilters?.genres || [])
+  const [sort, setSort] = useState<string>(defaultFilters?.sort || '')
+
+  useEffect(() => {
+    setSelectedGenres(defaultFilters?.genres || [])
+    setSort(defaultFilters?.sort || '')
+  }, [defaultFilters])
+
+  const toggleGenre = (genre: string) => {
+    const updatedGenres = selectedGenres.includes(genre)
+      ? selectedGenres.filter((g) => g !== genre)
+      : [...selectedGenres, genre]
+
+    setSelectedGenres(updatedGenres)
+    onChange?.({ genres: updatedGenres, sort })
+  }
+
+  const handleSortChange = (value: string) => {
+    setSort(value)
+    onChange?.({ genres: selectedGenres, sort: value })
+  }
+
   return (
-    <div className="flex flex-col  w-full h-full gap-6">
-      <Tabs defaultValue="genre" className='h-full'>
-        <TabsList className='flex flex-col gap-2 w-[120px] h-[66vh]'>
-          <TabsTrigger value="genre" className=''>Genre</TabsTrigger>
-          <TabsTrigger value="sort" className=''>Sort By</TabsTrigger>
+    <div className="flex w-full h-full gap-6">
+      <Tabs defaultValue="genre" className="w-full">
+        {/* Left Tabs Menu */}
+        <TabsList className="flex flex-col gap-2 w-[120px] h-[66vh]">
+          <TabsTrigger value="genre">Genre</TabsTrigger>
+          <TabsTrigger value="sort">Sort By</TabsTrigger>
         </TabsList>
 
-        {/* Genre Tab Content */}
-        <TabsContent value="genre" className='w-full'>
+        {/* Genre Tab */}
+        <TabsContent value="genre" className="w-full">
           <div className="px-3 py-2 space-y-2 rounded-lg border w-full h-[66vh] overflow-y-auto">
-            {genres.map((genre) => (
-              <label htmlFor={genre.toLowerCase().replace(/\s+/g, '')} key={genre} className="flex gap-2 text-sm font-semibold overflow-hidden">
-                <input type="checkbox" id={genre.toLowerCase().replace(/\s+/g, '')} />
+            {genresList.map((genre) => (
+              <label key={genre} className="flex gap-2 text-sm font-semibold">
+                <input
+                  type="checkbox"
+                  checked={selectedGenres.includes(genre)}
+                  onChange={() => toggleGenre(genre)}
+                />
                 {genre}
               </label>
             ))}
           </div>
         </TabsContent>
 
-        {/* Sort By Tab Content */}
-        <TabsContent value="sort" className='w-full '>
+        {/* Sort Tab */}
+        <TabsContent value="sort" className="w-full">
           <div className="px-3 py-2 space-y-2 rounded-lg border flex flex-col w-full h-[65vh]">
-            <label htmlFor="popularity" className="flex gap-2 text-sm font-semibold">
-              <input type="radio" id="popularity" name="sort" />
-              Popularity
-            </label>
-            <label htmlFor="date" className="flex gap-2 text-sm font-semibold">
-              <input type="radio" id="date" name="sort" />
-              Date
-            </label>
-            <label htmlFor="pricel" className="flex gap-2 text-sm font-semibold">
-              <input type="radio" id="pricel" name="sort" />
-              Price: Low to High
-            </label>
-            <label htmlFor="priceh" className="flex gap-2 text-sm font-semibold">
-              <input type="radio" id="priceh" name="sort" />
-              Price: High to Low
-            </label>
-            <label htmlFor="distance" className="flex gap-2 text-sm font-semibold">
-              <input type="radio" id="distance" name="sort" />
-              Distance: Near to Far
-            </label>
+            {['popularity', 'date', 'pricel', 'priceh', 'distance'].map((value) => {
+              const labelMap: Record<string, string> = {
+                popularity: 'Popularity',
+                date: 'Date',
+                pricel: 'Price: Low to High',
+                priceh: 'Price: High to Low',
+                distance: 'Distance: Near to Far',
+              }
+              return (
+                <label key={value} className="flex gap-2 text-sm font-semibold">
+                  <input
+                    type="radio"
+                    name="sort"
+                    checked={sort === value}
+                    onChange={() => handleSortChange(value)}
+                  />
+                  {labelMap[value]}
+                </label>
+              )
+            })}
           </div>
         </TabsContent>
-
       </Tabs>
-     </div>
-  );
+    </div>
+  )
 }
 
-export default ShowFilter;
+export default ShowFilter

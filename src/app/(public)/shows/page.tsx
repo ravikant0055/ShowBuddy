@@ -1,24 +1,70 @@
+"use client"
 import Link from 'next/link'
-import React from 'react'
+import React, { useState } from 'react'
 import { HiOutlineAdjustmentsHorizontal } from "react-icons/hi2";
 import { MdKeyboardArrowDown } from "react-icons/md";
 import data from '../../_data/data.json';
 import ShowCard from '@/app/components/ui/ShowCard';
 import FiltersModal from '@/app/components/ui/FiltersModal';
 import { Dialog, DialogTrigger } from '@/app/components/ui/dialog';
+import ShowFilter from '@/app/components/forms/ShowFilter';
 
 interface Show {
   id: number;
   image: string;
   name: string;
+  displayDate: string;
   date: string;
   time: string;
   price: string;
   venue: string;
   location: string;
+  genre?: string; 
 }
 
+interface Filters {
+  genres: string[];
+  sort: string;
+}
+
+
 const page = () => {
+  const [filters, setFilters] = useState<Filters>({ genres: [], sort: '' });
+  const [filteredShows, setFilteredShows] = useState(data.shows);
+
+  const handleApply = () => {
+    let result = [...data.shows];
+
+    // Example: Filter genres
+    if (filters.genres.length > 0) {
+      result = result.filter(show => filters.genres.includes(show.genre));
+    }
+
+    // Example: Sort
+    if (filters.sort) {
+      result = result.sort((a, b) => {
+        switch (filters.sort) {
+          case 'date':
+            return new Date(a.date).getTime() - new Date(b.date).getTime();
+          case 'pricel':
+            return parseFloat(a.price.replace('$', '')) - parseFloat(b.price.replace('$', ''));
+          case 'priceh':
+            return parseFloat(b.price.replace('$', '')) - parseFloat(a.price.replace('$', ''));
+          default:
+            return 0;
+        }
+      });
+    }
+
+
+    setFilteredShows(result);
+  };
+
+  const handleClear = () => {
+    setFilters({ genres: [], sort: '' });
+    setFilteredShows(data.shows);
+  };
+  
   return (
     <div className='px-30 py-7 space-y-7'>
       <section className='space-y-4'>
@@ -39,13 +85,15 @@ const page = () => {
                 Filters
               </button>
             </DialogTrigger>
-            <FiltersModal/>
+            <FiltersModal onApply={handleApply} onClear={handleClear}>
+              <ShowFilter defaultFilters={filters}  onChange={(updatedFilters) => setFilters(updatedFilters)}/>
+            </FiltersModal>
           </Dialog>
         </div>
       </section>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5">
-        {data.shows?.map((show: Show) => (
+        {filteredShows?.map((show: Show) => (
           <Link href={`/shows/${show.id}`} key={show.id}><ShowCard show={show}/></Link>
         ))}
       </div>

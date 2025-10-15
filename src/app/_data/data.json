@@ -95,71 +95,85 @@
             "id": 1,
             "image": "https://media.insider.in/image/upload/c_crop,g_custom/v1758970250/jwkqaq8sbi0olxqovvdl.png",
             "name": "Diwali Dhamaka",
-            "date": "Fri, 15 Oct",
+            "displayDate": "Fri, 15 Oct",
+            "date": "2024-10-15",
             "time": "7:00 PM",
             "price": "$75",
             "venue": "Aura Kitchen Bar",
-            "location": "Gurugram"
+            "location": "Gurugram",
+             "genre": "Party"
         },
         {
             "id": 2,
             "image": "https://media.insider.in/image/upload/c_crop,g_custom/v1754319439/gjzedwmrxfdboi45secc.jpg",
             "name": "Akon India Tour",
-            "date": "Sun, 09 Nov",
+            "displayDate": "Sun, 09 Nov",
+            "date": "2024-11-09",
             "time": "8:00 PM",
             "price": "$150",
             "venue": "Gate No 14, JLN Stadium",
-            "location": "New Delhi"
+            "location": "New Delhi",
+            "genre": "Party"
         },
         {
             "id": 3,
             "image": "https://media.insider.in/image/upload/c_crop,g_custom/v1759743110/r6qyzn0m9sowznwb7tuj.jpg",
             "name": "Diwali Party",
-            "date": "Fri, 17 Oct",
+            "displayDate": "Fri, 17 Oct",
+            "date": "2024-10-17",
             "time": "7:30 PM",
             "price": "$120",
             "venue": "Cozy Box Cafe",
-            "location": "Gurugram"
+            "location": "Gurugram",
+             "genre": "Party"
         },
         {
             "id": 4,
             "image": "https://media.insider.in/image/upload/c_crop,g_custom/v1752320027/zwlatvsemxliv7on5aln.png",
             "name": "Adult Rated Show",
-            "date": "Wed, 6 Nov",
+            "displayDate": "Wed, 6 Nov",
+            "date": "2024-11-06",
             "time": "6:45 PM",
             "price": "$100",
             "venue": "Imperial Theater",
-            "location": "Gurugram"
+            "location": "Gurugram",
+             "genre": "Party"
         },
         {
             "id": 5,
             "image": "https://media.insider.in/image/upload/c_crop,g_custom/v1750449286/tjli9nctsqmef6d2q1gt.png",
             "name": "Comedy Night",
-            "date": "Fri, 10 Oct",
+            "displayDate": "Fri, 10 Oct",
+            "date": "2024-10-10",
             "time": "5:30 PM",
             "price": "$95",
             "venue": "Comdey Club",
-            "location": "Noida"
+            "location": "Noida",
+             "genre": "Comedy"
         },
         {
             "id": 6,
             "image": "https://media.insider.in/image/upload/c_crop,g_custom/v1741943906/o5piw4srw6dm00h6rh1o.jpg",
             "name": "Sex Jokes Night",
-            "date": "Thu, 9 Oct",
+            "displayDate": "Thu, 9 Oct",
+            "date": "2024-10-09",
             "time": "8:00 PM",
             "price": "$85",
             "venue": "The Joke Theator",
-            "location": "Gurugram"
+            "location": "Gurugram",
+             "genre": "Party"
         },
         {
             "id": 7,
             "image": "https://media.insider.in/image/upload/c_crop,g_custom/v1759047937/qgedkdi9gplx02xc0kgg.jpg",
             "name": "Noida Comdey Bar",
-            "date": "Sat, 10 Oct",
+            "displayDate": "Sat, 10 Oct",
+            "date": "2024-10-10",
             "time": "8:00 PM",
             "price": "$240",
             "venue": "Hitchin Bisto",
-            "location": "Noida"
+            "location": "Noida",
+            "genre": "Party"
         }
     ]
 }
