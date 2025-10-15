@@ -4,18 +4,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import MovieCard from '../ui/MovieCard';
 import data from "../../_data/data.json";
-
-interface Movie {
-  id: number;
-  image: string;
-  name: string;
-  rating: number;
-  language: string;
-  category: string;
-  genre: string[];
-  release_date: string;
-  overview: string;
-}
+import { Movie } from '@/types';
 
 const MoviesSlider = () => {
   return (

@@ -1,7 +1,7 @@
-'use client';
+'use client'
 import React from 'react';
-import { DialogContent, DialogDescription, DialogFooter, DialogHeader, DialogTitle,DialogClose,} from './dialog';
-import ShowFilter from '../forms/ShowFilter';
+import { DialogContent, DialogFooter, DialogHeader, DialogTitle,DialogClose,} from './dialog';
+
 interface FiltersModalProps {
   children: React.ReactNode;
   onApply: () => void;

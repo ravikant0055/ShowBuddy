@@ -1,17 +1,6 @@
+import { Movie } from '@/types';
 import Image from 'next/image';
 import React from 'react'
-
-interface Movie {
-  id: number;
-  image: string;
-  name: string;
-  rating: number;
-  language: string;
-  category: string;
-  genre: string[];
-  release_date: string;
-  overview: string;
-}
 
 const MovieCard = ({ movie }: { movie: Movie }) => {
   return (

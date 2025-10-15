@@ -1,17 +1,6 @@
+import { Show } from '@/types';
 import Image from 'next/image';
 import React from 'react'
-
-interface Show {
-  id: number;
-  image: string;
-  name: string;
-  displayDate: string;
-  date: string;
-  time: string;
-  price: string;
-  venue: string;
-  location: string;
-}
 
 const ShowCard = ({show}: {show : Show}) => {
   return (
